@@ -5,6 +5,7 @@
 }
 body{
   font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
 }
 .container {
   max-width: 1400px;
@@ -12,7 +13,7 @@ body{
 
 .top-header {
   height: 70px;
-  font-size: 0.7rem;
+  font-size: 0.7em;
 }
 .box-center{
   height: 100%;
@@ -42,6 +43,12 @@ body{
   -ms-transform: translate(0, -50%);
   transform: translate(0, -50%);
 }
+.top-header [class*='col-']{
+  height: 100%;
+}
+.box-logo{
+  width: 120px;
+}
 .top-header [class*='col-'] nav ul{
   text-align: right;
   vertical-align: middle;
@@ -49,7 +56,7 @@ body{
 .top-header [class*='col-'] nav ul li{
   display: inline-block;
   text-align: center;
-  padding: 0 1rem;
+  padding: 0 1em;
 }
 
 .top-header [class*='col-'] nav ul li a{
@@ -72,14 +79,14 @@ div.bottom-header>[class*='col-']{
   text-align: center;
 }
 div.bottom-header>[class*='col-'] img{
-  height: 4rem;
-  padding: 0.3rem;
+  height: 4em;
+  padding: 0.3em;
 }
 div.bottom-header>[class*='col-'] .item-center{
   width: 80%;
 }
 div.bottom-header>[class*='col-'] .item-center h1{
-  font-size: 3rem;
+  font-size: 3em;
   margin: 15px 0;
 }
 div.bottom-header>[class*='col-'] .item-center p{
@@ -90,3 +97,27 @@ div.bottom-header>[class*='col-'] .item-center p{
 .debug [class*='col-'] {
   border: 1px solid black;
 } */
+@media all and (min-width: 768px) and (max-width: 992px){
+  body{
+    font-size: 13px;
+  }
+  header#bottom-header{
+
+    height: 450px;
+  }
+  .box-logo{
+    width: 100px;
+  }
+}
+@media all and (max-width: 768px) {
+  body{
+    font-size: 10px;
+  }
+  header#bottom-header{
+
+    height: 300px;
+  }
+  .box-logo{
+    width: 80px;
+  }
+}
