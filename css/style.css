@@ -10,7 +10,13 @@ body{
 .container {
   max-width: 1400px;
 }
-
+#top-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
+}
 .top-header {
   height: 70px;
   font-size: 0.7em;
@@ -92,6 +98,27 @@ div.bottom-header>[class*='col-'] .item-center h1{
 div.bottom-header>[class*='col-'] .item-center p{
   margin-bottom: 15px;
 }
+div.main-selection{
+  margin: 30px auto;
+}
+div.box-main{
+  text-align: center;
+}
+div.img-main img{
+  width: 80%;
+}
+div.main-selection > div > .box-main {
+  background-color: #FAFAFA;
+  margin: 15px;
+}
+.box-main> h2{
+  font-size: 2em;
+  padding-top: 50px;
+  margin-bottom: 30px;
+}
+.box-main> h3{
+  margin-bottom: 25px;
+}
 /* DEBUG */
 /* .debug .container,
 .debug [class*='col-'] {
@@ -108,10 +135,13 @@ div.bottom-header>[class*='col-'] .item-center p{
   .box-logo{
     width: 100px;
   }
+  div.bottom-header>[class*='col-'] .item-center h1{
+    font-size: 2.5em;
+  }
 }
 @media all and (max-width: 768px) {
   body{
-    font-size: 10px;
+    font-size: 13px;
   }
   header#bottom-header{
 
@@ -120,4 +150,11 @@ div.bottom-header>[class*='col-'] .item-center p{
   .box-logo{
     width: 80px;
   }
+  div.bottom-header>[class*='col-'] .item-center h1{
+    font-size: 2.5em;
+  }
+  div.img-main img{
+    width: 60%;
+  }
+
 }
