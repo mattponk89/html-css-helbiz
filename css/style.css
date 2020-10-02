@@ -11,7 +11,7 @@ body{
 }
 
 .top-header {
-  height: 80px;
+  height: 70px;
   font-size: 0.7rem;
 }
 .box-center{
@@ -22,15 +22,26 @@ body{
   position:absolute;
   top: 50%;
   left:50%;
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  margin:0;
 }
 .item-center-right{
-  position:absolute;
-  top: 50%
+  margin: 0;
+  position: absolute;
+  top: 50%;
   right:0;
-  transform: translate(-50%, 0);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
 }
-
+.item-center-left{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left:0;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
 .top-header [class*='col-'] nav ul{
   text-align: right;
   vertical-align: middle;
@@ -38,14 +49,44 @@ body{
 .top-header [class*='col-'] nav ul li{
   display: inline-block;
   text-align: center;
+  padding: 0 1rem;
 }
+
 .top-header [class*='col-'] nav ul li a{
   text-decoration: none;
   color: black;
 }
-
+.my-language-bar nav ul li:not(:last-child) {
+  border-right: 1px solid black
+}
+header#bottom-header{
+  background-image:url(../img/bg-top.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+}
+div.bottom-header,
+div.bottom-header>[class*='col-']{
+  height:100%;
+  color: white;
+  text-align: center;
+}
+div.bottom-header>[class*='col-'] img{
+  height: 4rem;
+  padding: 0.3rem;
+}
+div.bottom-header>[class*='col-'] .item-center{
+  width: 80%;
+}
+div.bottom-header>[class*='col-'] .item-center h1{
+  font-size: 3rem;
+  margin: 15px 0;
+}
+div.bottom-header>[class*='col-'] .item-center p{
+  margin-bottom: 15px;
+}
 /* DEBUG */
-.debug .container,
+/* .debug .container,
 .debug [class*='col-'] {
   border: 1px solid black;
-}
+} */
